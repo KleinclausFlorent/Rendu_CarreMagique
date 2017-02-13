@@ -67,10 +67,11 @@ Position DeplacerCurseur(int tab[TAILLE][TAILLE],Position Pos){
             Pos.x=Pos.x+1;
             Pos.y=Pos.y-1;
             //Mouvement nord-ouest : la case nord-est est prise donc on va au nord-ouest
-        } else if ((Pos.y==0)&&(tab[Pos.x][TAILLE-2]==0)) //Si on est sur la ligne du haut ( x=0)        {
+        } else if ((Pos.y==0)&&(tab[Pos.x][TAILLE-2]==0))
+        {
+            //Si on est sur la ligne du haut ( x=0)        {
             Pos.y=TAILLE-2;
-
-        } else if ((Pos.y>1)&&(tab[Pos.x][Pos.y-2]==0)) //Si on est sur la deuxième ligne ( x=1)
+        }else if ((Pos.y>1)&&(tab[Pos.x][Pos.y-2]==0)) //Si on est sur la deuxième ligne ( x=1)
         {
             Pos.y=Pos.y-2;
         } else if ((Pos.y==1)&&(tab[Pos.x][TAILLE-1]==0)) //Si on est sur les autres lignes
@@ -85,7 +86,6 @@ Position DeplacerCurseur(int tab[TAILLE][TAILLE],Position Pos){
 //SORTIE : Tableau rempli
 void remplissage(int tab[TAILLE][TAILLE], Position Pos){
     int i;
-    int Deplacement;
     for (i=1; i<(TAILLE*TAILLE)+1; i++)
     {
         tab[Pos.x][Pos.y]=i;
